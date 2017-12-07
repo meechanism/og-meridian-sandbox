@@ -1,5 +1,4 @@
-# React Component Library Playground
-_for [Heroku](https://www.heroku.com/) deployment_
+# React Component Library Playground for Meeact
 
 ### OVERIVEW
 This is a playground for experimenting with a component library. This is intended to provide:
@@ -8,9 +7,17 @@ This is a playground for experimenting with a component library. This is intende
 * a lightweight webpack config (for development and production)
 * some helpful tooling for development workflow
 * a similar setup to what you'll see in the wild
-* Heroku-ready deployment setup
 
-_*NOTE:* This app is based on my [React + Node Starter](https://github.com/alanbsmith/react-node-example)._
+_*NOTE:* This app is based on Alan Smith's [React + Node Starter](https://github.com/alanbsmith/react-node-example)._
+
+
+### Link to your library
+
+Since this project was meant to be tested with `meeact-comp`, do the following:
+
+1. Go to root of `meeact-comp` and run `npm link`
+2. Go to root of this repo and run `npm link meeact-comp`
+We are ready to use our component library in the playground!
 
 ### UP & RUNNING
 * Install dependencies
@@ -20,6 +27,7 @@ _*NOTE:* This app is based on my [React + Node Starter](https://github.com/alanb
 * `$ npm run dev`
 
 Once the server is running, you can visit `http://localhost:8080/`
+
 
 ### Linting
 _This assumes you have eslint and eslint-watch installed. If you don't, run the following:_
@@ -55,17 +63,3 @@ To build your production assets and run the server:
 $ npm start
 ```
 
-### DEPLOYING TO HEROKU
-This app is set up for deployment to Heroku!
-
-_This assumes you have already have a Heroku account and have the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed_
-```
-$ heroku login
-$ heroku create -a name-of-your-app
-$ git push heroku master
-$ heroku open
-```
-
-Heroku will follow the `build` command in your `package.json` and compile assets with `webpack.prod.config.js`. It runs the Express web server in `server.js`.
-
-If you're unfamiliar with Heroku deployment (or just need a refresher), they have a really great walkthrough [here](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction).

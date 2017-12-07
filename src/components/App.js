@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Label } from 'one-component-lib';
+import { Button, Label } from 'meeact-comp';
 
 import '../assets/stylesheets/base.scss';
 
