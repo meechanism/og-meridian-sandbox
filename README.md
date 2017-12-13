@@ -1,6 +1,7 @@
-# React Component Library Playground for Meeact
+# React Component Library Playground for onestyleguide
 
 ### OVERIVEW
+
 This is a playground for experimenting with a component library. This is intended to provide:
 
 * a small app to experiment with a component library locally.
@@ -10,26 +11,38 @@ This is a playground for experimenting with a component library. This is intende
 
 _*NOTE:* This app is based on Alan Smith's [React + Node Starter](https://github.com/alanbsmith/react-node-example)._
 
+---
 
-### Link to your library
+## Link to your library
 
-Since this project was meant to be tested with `meeact-comp`, do the following:
+Since this project was meant to be tested with various packages in the
+`onestyleguide` mono repo, we will need to `npm link` the following packages:
 
-1. Go to root of `meeact-comp` and run `npm link`
-2. Go to root of this repo and run `npm link meeact-comp`
-We are ready to use our component library in the playground!
+- om-react-components
+- one-base
 
-### UP & RUNNING
-* Install dependencies
-`$ npm install` or `$ yarn`
+To symlink the above:
 
-* Fire up a development server:
-* `$ npm run dev`
+1. Go to root of each package above and run `npm link`
+2. Go to root of _this_ repo and run `npm link PACKAGENAME`
+
+We are ready to use our component library in the playground! Once the packages
+above are available on npm, we will not need to do this manual linking and can
+instead make them be dependencies of this project.
+
+---
+
+## UP & RUNNING
+
+* Install dependencies: `$ npm install` or `$ yarn`
+* Fire up a development server: `$ npm run dev`
 
 Once the server is running, you can visit `http://localhost:8080/`
 
+---
 
-### Linting
+## Linting
+
 _This assumes you have eslint and eslint-watch installed. If you don't, run the following:_
 ```
 $ npm i -g eslint eslint-watch
@@ -48,15 +61,18 @@ To run the watch task:
 ```
 $ npm run lint:watch
 ```
+---
 
-### Testing
+## Testing
 
 To run the tests:
 ```
 $ npm test
 ```
 
-### Production Build
+---
+
+## Production Build
 
 To build your production assets and run the server:
 ```

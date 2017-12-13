@@ -11,9 +11,7 @@ module.exports = {
       { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
     ]
   },
-  resolve: {
-    extensions: ['.js','.scss']
-  },
+
   output: {
     path: path.join(__dirname, '/dist'),
     publicPath: '/',
