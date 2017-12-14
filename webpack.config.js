@@ -7,11 +7,17 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
+      {
+        test: /\.js?$/,
+        loader: 'babel-loader?sourceMap',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.s?css$/,
+        loader: 'style-loader!css-loader?sourceMap!sass-loader?sourceMap' ,
+      },
     ]
   },
-
   output: {
     path: path.join(__dirname, '/dist'),
     publicPath: '/',
